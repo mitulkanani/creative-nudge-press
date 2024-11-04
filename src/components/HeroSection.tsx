@@ -8,7 +8,7 @@ import Description2 from './Common/Description2';
 const HeroSection = () => {
   const { HeroSection } = HomeHeroData;
   return (
-    <div className="relative -mt-[112px] flex h-full min-h-[524px] w-full xl:min-h-[1125px]">
+    <div className="relative flex h-full min-h-[524px] w-full xl:-mt-[112px] xl:min-h-[1125px]">
       <Image
         src={HeroSection.image}
         alt=""
