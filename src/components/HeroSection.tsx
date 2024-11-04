@@ -2,6 +2,8 @@ import { HomeHeroData } from '@/utils/content';
 import Image from 'next/image';
 import React from 'react';
 import Button from './Common/Button';
+import Heading1 from './Common/Heading1';
+import Description2 from './Common/Description2';
 
 const HeroSection = () => {
   const { HeroSection } = HomeHeroData;
@@ -18,13 +20,16 @@ const HeroSection = () => {
         <div className="relative flex w-full max-w-[722px] flex-col items-center gap-9 rounded-[24px] bg-lightwhite px-5 py-[72px] md:px-[49px]">
           <div className="flex flex-col gap-5">
             <div className="flex w-full flex-col items-center justify-center gap-2">
-              <h1 className="text-center font-lora text-[36px] font-medium leading-[40.08px] text-yellow">
-                {HeroSection.title}
-              </h1>
-              <p className="text-center font-lora text-base leading-6 text-gray">
-                {HeroSection.description}
-              </p>
+              <Heading1
+                title={HeroSection.title}
+                style="!text-yellow !text-center"
+              />
+              <Description2
+                description={HeroSection.description}
+                style="!text-center"
+              />
             </div>
+
             <h3 className="text-center font-lora text-[18px] leading-6 text-lightBlack">
               {HeroSection.slogan}
             </h3>

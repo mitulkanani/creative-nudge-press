@@ -2,6 +2,9 @@ import { HomeHeroData } from '@/utils/content';
 import Image from 'next/image';
 import React from 'react';
 import Button from './Common/Button';
+import Heading2 from './Common/Heading2';
+import Description2 from './Common/Description2';
+import Heading3 from './Common/Heading3';
 
 const JoinOurCreativeCommunity = () => {
   const { JoinOurCreativeCommunitySection } = HomeHeroData;
@@ -18,16 +21,21 @@ const JoinOurCreativeCommunity = () => {
           />
           <div className="flex flex-col items-center justify-center gap-8">
             <div className="flex flex-col items-center justify-center gap-2">
-              <h1 className="text-center font-lora text-[40px] font-medium leading-[51.2px] text-yellow">
-                {JoinOurCreativeCommunitySection?.title}
-              </h1>
-              <p className="w-full max-w-[676px] text-center font-lora text-[20px] leading-[30px] text-lightBlack">
-                {JoinOurCreativeCommunitySection?.description}
-              </p>
+              <Heading2
+                title={JoinOurCreativeCommunitySection?.title}
+                style="!text-[40px]"
+              />
+
+              <Heading3
+                title={JoinOurCreativeCommunitySection?.description}
+                style="!text-[20px] !text-center !w-full !max-w-[676px] !font-normal"
+              />
             </div>
-            <p className="w-full max-w-[600px] text-center font-lora text-base leading-6 text-gray">
-              {JoinOurCreativeCommunitySection?.subdescritpion}
-            </p>
+
+            <Description2
+              description={JoinOurCreativeCommunitySection?.subdescritpion}
+              style="!text-center !w-full !max-w-[600px]"
+            />
           </div>
         </div>
         <Button label={JoinOurCreativeCommunitySection?.button?.label} />
