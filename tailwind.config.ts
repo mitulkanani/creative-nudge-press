@@ -9,8 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        frost: '#FFF8E6',
+        darkBlack: '#323232',
+        yellowish: '#FFB703',
+        slateGray: '#727272',
+        snow: '#FBFBFB',
+        oranges: '#FB8500',
+        icy: '#FBFBFF',
+        silverMist: '#D7D7D7',
+        softCloud: '#F6F6F6',
+        cyanBlue: '#219EBC',
+        yellow: '#FFB703',
+        gray: '#727272',
+        lightBlack: '#323232',
+        lightwhite: '#FFF8E6BF',
+        lightyellow: '#FFF8E6',
+      },
+      fontFamily: {
+        lora: ['Lora', 'serif'],
       },
     },
   },
