@@ -1,6 +1,10 @@
 import { HomeHeroData } from '@/utils/content';
 import Image from 'next/image';
 import React from 'react';
+import Heading1 from './Common/Heading1';
+import Description1 from './Common/Description1';
+import Heading3 from './Common/Heading3';
+import Description2 from './Common/Description2';
 
 const OurBooksSection = () => {
   const { OurBooksSection } = HomeHeroData;
@@ -8,12 +12,8 @@ const OurBooksSection = () => {
     <div className="mx-auto w-full max-w-[1440px] px-5 py-[84px] md:px-0">
       <div className="flex flex-col gap-[64px]">
         <div className="flex flex-col items-center justify-center gap-1">
-          <h1 className="font-lora text-[40px] font-medium leading-[51.2px] text-lightBlack">
-            {OurBooksSection.title}
-          </h1>
-          <p className="font-lora text-[18px] leading-6 text-gray">
-            {OurBooksSection.description}
-          </p>
+          <Heading1 title={OurBooksSection.title} />
+          <Description1 description={OurBooksSection.description} />
         </div>
         <div className="flex flex-wrap justify-center gap-6">
           {OurBooksSection.cards.map((card, index) => (
@@ -29,17 +29,13 @@ const OurBooksSection = () => {
                 className="h-full max-h-[350px] w-full max-w-[404px]"
               />
               <div className="flex flex-col">
-                <h1 className="font-lora text-[20px] leading-[25.6px] text-lightBlack">
-                  {card.title}
-                </h1>
+                <Heading3 title={card.title} style="!text-[20px] k" />
+
                 <div className="flex flex-col">
                   {card.description.map((desc, index) => (
-                    <p
-                      key={index}
-                      className="font-lora text-base leading-6 text-gray"
-                    >
-                      {desc}
-                    </p>
+                    <div key={index}>
+                      <Description2 description={desc} />
+                    </div>
                   ))}
                 </div>
               </div>

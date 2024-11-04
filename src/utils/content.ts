@@ -104,7 +104,7 @@ export const aboutPageData = {
     cards: [
       {
         id: 1,
-        image: '/svg/inspiration.svg',
+        image: '/svg/Inspiration.svg',
         title: 'Inspiration',
         desc: 'We create content that sparks creativity and motivation in our readers.',
       },
@@ -256,6 +256,111 @@ export const HomeHeroData = {
       label: 'Contact Us About Your Manuscript',
       variant: '',
     },
+  },
+};
+
+export const Book = {
+  herosection: {
+    title: 'Our Books',
+    description:
+      'Inspiring stories and empowering knowledge for readers of all ages.',
+    backgroundImg: '/images/commonHeroBg.png',
+    leftIcon: '/svg/bird.svg',
+    rightIcon: '/svg/plane.svg',
+  },
+  TransformativeLiterature: {
+    title: 'Transformative Literature for All Ages',
+    description: [
+      "At Creative Nudge Press, we publish books that inspire, educate, and empower. Our catalog includes heartwarming children's series and insightful nonfiction guides, all designed to spark creativity, foster personal growth, and provide valuable knowledge.",
+    ],
+    sideImage: '/images/transformative.png',
+    imgOrder: 2,
+    textOrder: 1,
+    textLeftIcon: '/svg/star.svg',
+    textRightIcon: '/svg/sparrow.svg',
+  },
+  ChildrenBooks: {
+    heading: "Children's Books",
+    image: '',
+    title: 'Mumbai Street Siblings Series',
+    desc: 'Follow the heartwarming adventures of three resilient siblings navigating life on the streets of Mumbai. This series celebrates the power of family, hope, and the indomitable human spirit.',
+    title1: "Amit's Sweet Surprise",
+    desc1:
+      'Join Amit, the youngest of the siblings, as he follows the tantalizing scent of jalebi through the bustling streets of Mumbai. This adventure teaches valuable lessons about curiosity, family bonds, and the unexpected joys found in everyday life.',
+    title2: 'KeyThemes',
+    desc2: 'Sibling love, curiosity, Mumbai street life, resilience',
+    icon: '',
+    title3: 'More Adventures Coming Soon!',
+    desc3:
+      'Stay tuned for more exciting stories featuring Anita, Sunita, and Amit as they explore their city, overcome challenges, and discover the magic in everyday moments.',
+  },
+  TheDayIMetSeries: {
+    title: 'The Day I Met... Series',
+    desc: "A captivating trilogy that empowers children to overcome life's challenges with courage and resilience. Each book introduces a metaphorical obstacle, teaching valuable lessons through fantastical, surrealist adventures filled with whimsy and drama.",
+    title1: 'Key Themes:',
+    desc1: ' Courage, Resilience, Personal Growth, Overcoming Obstacles',
+    cards: [
+      {
+        icon: '/svg/compass.svg',
+        title: 'The Day I Met the Abyss',
+        decs: 'Leap into possibility!',
+      },
+      {
+        icon: '/svg/wall.svg',
+        title: 'The Day I Met the Wall',
+        decs: 'Climb towards growth!',
+      },
+      {
+        icon: '/svg/cloud.svg',
+        title: 'The Day I Met the Tempest',
+        decs: 'Weather any storm!',
+      },
+    ],
+  },
+  OurMission: {
+    title: 'Aligned with Our Mission',
+    description:
+      "Every book we publish is carefully crafted to align with our mission of transforming lives through literature. Here's how our books embody our core values:",
+    isDescriptionTop: true,
+    cards: [
+      {
+        id: 1,
+        image: '/svg/books.svg',
+        title: 'Inspiration',
+        desc: 'Our stories spark creativity and motivation, encouraging readers to dream big and pursue their passions.',
+      },
+      {
+        id: 2,
+        image: '/svg/leaf.svg',
+        title: 'Empowerment',
+        desc: 'We provide tools and knowledge for personal growth, equipping readers to overcome obstacles and achieve success.',
+      },
+      {
+        id: 3,
+        image: '/svg/user.svg',
+        title: 'Diversity',
+        desc: 'Our books reflect a wide range of experiences, promoting understanding and empathy across cultures and backgrounds.',
+      },
+      {
+        id: 4,
+        image: '/svg/heart.svg',
+        title: 'Excellence',
+        desc: 'We maintain high-quality publishing standards, ensuring each book delivers meaningful content and a delightful reading experience.',
+      },
+    ],
+  },
+  Nonfiction: {
+    heading: 'Nonfiction',
+    title: 'Transferred: Guide to Community College & Transferring',
+    description:
+      'An inspiring and practical guide for community college students aiming to transfer to top universities. This comprehensive resource provides step-by-step advice, real-life success stories, and actionable strategies to help students achieve their academic dreams.',
+    points: [
+      'Navigating the transfer process',
+      'Building a competitive application',
+      'Securing financial aid and scholarships',
+      'Overcoming common challenges',
+      'Success strategies for after transfer',
+    ],
   },
 };
 

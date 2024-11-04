@@ -1,20 +1,22 @@
 import { data } from '@/utils/types';
 import Image from 'next/image';
 import React from 'react';
+import Heading1 from './Heading1';
+import Description1 from './Description1';
+import Heading3 from './Heading3';
+import Description2 from './Description2';
 
 const CardSection = ({ data }: data) => {
   return (
     <div className="mx-auto w-full max-w-[1440px] px-5 py-[84px] xl:px-[90px]">
       <div className="flex flex-col items-center gap-[72px]">
         <div className="flex flex-col items-center gap-1">
-          <h1 className="font-lora text-[40px] font-medium leading-[51.2px] text-lightBlack">
-            {data?.title}
-          </h1>
-          <p
-            className={`font-lora text-[18px] leading-6 text-gray ${!data?.isDescriptionTop && 'hidden'}`}
-          >
-            {data?.description}
-          </p>
+          <Heading1 title={data?.title} />
+
+          <Description1
+            description={data?.description}
+            style="!max-w-[800px] w-full !text-center"
+          />
         </div>
         <div className="flex flex-wrap justify-center gap-6">
           {data?.cards?.map((card) => (
@@ -30,12 +32,9 @@ const CardSection = ({ data }: data) => {
                 className="h-full max-h-[64px] w-full max-w-[64px]"
               />
               <div className="flex flex-col items-center justify-center gap-1">
-                <h1 className="font-lora text-[20px] leading-[25.6px] text-lightBlack">
-                  {card?.title}
-                </h1>
-                <p className="text-center font-lora text-base leading-6 text-gray">
-                  {card?.desc}
-                </p>
+                <Heading3 title={card?.title} style="!text-[20px] " />
+
+                <Description2 description={card?.desc} style="!text-center" />
               </div>
             </div>
           ))}
