@@ -18,7 +18,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/svg/logo.svg" type="image/svg" sizes="any" />
       </head>
-      <body className={``}>
+      <body className={`font-lora`}>
         <Navbar />
         {children}
         <Footer />
