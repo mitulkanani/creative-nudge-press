@@ -104,7 +104,7 @@ export const aboutPageData = {
     cards: [
       {
         id: 1,
-        image: '/svg/inspiration.svg',
+        image: '/svg/Inspiration.svg',
         title: 'Inspiration',
         desc: 'We create content that sparks creativity and motivation in our readers.',
       },
