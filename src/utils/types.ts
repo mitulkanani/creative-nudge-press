@@ -7,6 +7,7 @@ export type PropsHeroSectionCommon = {
     rightIcon: string;
   };
   style?: string;
+  isRightImgRotate?: boolean;
 };
 
 export type PropsHeading = {
@@ -56,3 +57,9 @@ export type data = {
     }[];
   };
 };
+
+export interface BlogDetailsProps {
+  params: {
+    slug: string;
+  };
+}

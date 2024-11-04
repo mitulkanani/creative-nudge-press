@@ -4,7 +4,11 @@ import { PropsHeroSectionCommon } from '@/utils/types';
 import Heading2 from './Heading2';
 import Description1 from './Description1';
 
-const HeroSection = ({ data, style }: PropsHeroSectionCommon) => {
+const HeroSection = ({
+  data,
+  style,
+  isRightImgRotate,
+}: PropsHeroSectionCommon) => {
   const { title, description, backgroundImg, leftIcon, rightIcon } = data;
   return (
     <div className={`relative -mt-[112px] h-full w-full ${style}`}>
@@ -27,11 +31,11 @@ const HeroSection = ({ data, style }: PropsHeroSectionCommon) => {
             className="absolute -bottom-5 -left-5"
           />
           <Image
-            width={60}
+            width={67}
             height={50}
             alt="right icon"
             src={rightIcon}
-            className="absolute -right-5 -top-5"
+            className={`absolute ${isRightImgRotate ? '-top-8 right-5 rotate-[41deg]' : '-right-5 -top-5'}`}
           />
         </div>
       </div>
