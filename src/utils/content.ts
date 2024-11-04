@@ -258,3 +258,85 @@ export const HomeHeroData = {
     },
   },
 };
+
+export const blogPageData = {
+  herosection: {
+    title: 'Our Blog',
+    description: 'Inspiration, Insights, and Ideas for Readers and Writers',
+    backgroundImg: '/images/commonHeroBg.png',
+    leftIcon: '/svg/openedBook.svg',
+    rightIcon: '/svg/starWithGlasses.svg',
+  },
+  articles: {
+    title: 'Featured Articles',
+    description: 'Explore our Featured Articles you can read now.',
+    blogs: [
+      {
+        id: 1,
+        image: '/images/article1.png',
+        title: "5 Strategies to Overcome Writer's Block",
+        description:
+          'Discover practical tips to reignite your creativity and get your writing flowing again...',
+        btnText: 'Read More',
+      },
+      {
+        id: 2,
+        image: '/images/article2.png',
+        title: "Behind the Scenes: Creating 'The Day I Met the Abyss'",
+        description:
+          'Take a journey with us as we explore the inspiration and process behind our latest book...',
+        btnText: 'Read More',
+      },
+      {
+        id: 3,
+        image: '/images/article3.png',
+        title: 'Cultivating Resilience in Children Through Literature',
+        description:
+          "Learn how stories can empower children to face life's challenges with courage and confidence...",
+        btnText: 'Read More',
+      },
+    ],
+  },
+  exploreOurContent: {
+    title: 'Explore Our Content',
+    description: 'Explore our Content & Articles you can read now.',
+    cards: [
+      {
+        cardTitle: 'Inspiration & Motivation',
+        articles: [
+          'Inspiration & Motivation',
+          'Embracing Failure as a Stepping Stone',
+          'The Power of Positive Thinking in Writing',
+        ],
+        textColor: '#FB8500',
+      },
+      {
+        cardTitle: 'Writing & Publishing Tips',
+        articles: [
+          'Crafting Compelling Characters',
+          'The Art of Self-Editing',
+          'Navigating the Publishing Industry',
+        ],
+        textColor: '#083375',
+      },
+      {
+        cardTitle: 'Behind the Scenes',
+        articles: [
+          'A Day in the Life of an Editor',
+          'From Manuscript to Bookshelf: The Journey of a Book',
+          'Collaborating with Illustrators',
+        ],
+        textColor: '#219EBC',
+      },
+      {
+        cardTitle: 'Educational Content',
+        articles: [
+          'Fostering a Love for Reading in Children',
+          "The Impact of Diversity in Children's Literature",
+          'Using Stories to Teach Emotional Intelligence',
+        ],
+        textColor: '#ED2626',
+      },
+    ],
+  },
+};

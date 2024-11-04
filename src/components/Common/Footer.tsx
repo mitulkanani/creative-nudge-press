@@ -1,3 +1,4 @@
+'use client';
 import { footerData } from '@/utils/content';
 import React from 'react';
 import Heading1 from './Heading1';
@@ -5,6 +6,7 @@ import Description1 from './Description1';
 import Image from 'next/image';
 import Description2 from './Description2';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
   const {
@@ -18,9 +20,11 @@ const Footer = () => {
     title,
     element,
   } = footerData;
+  const router = usePathname();
+  const isNotBg = router === '/' || router === '/about';
   return (
-    <>
-      <div className="mx-auto mt-[64px] flex max-w-[1440px] flex-col items-center gap-10 px-5 md:gap-[106.81px] lg:flex-row xl:pl-[148px] xl:pr-[77.81px]">
+    <div className={`pt-[64px] ${!isNotBg && 'bg-snow'}`}>
+      <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-10 px-5 md:gap-[106.81px] lg:flex-row xl:pl-[148px] xl:pr-[77.81px]">
         <div className="relative order-2 flex flex-col gap-10 md:gap-[72px] lg:order-1">
           <div className="flex flex-col gap-2">
             <Heading1 title={title} />
@@ -64,7 +68,7 @@ const Footer = () => {
           description={rights}
         />
       </div>
-    </>
+    </div>
   );
 };
 
