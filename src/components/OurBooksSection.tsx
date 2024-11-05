@@ -5,6 +5,7 @@ import Heading1 from './Common/Heading1';
 import Description1 from './Common/Description1';
 import Heading3 from './Common/Heading3';
 import Description2 from './Common/Description2';
+import Link from 'next/link';
 
 const OurBooksSection = () => {
   const { OurBooksSection } = HomeHeroData;
@@ -17,7 +18,8 @@ const OurBooksSection = () => {
         </div>
         <div className="flex flex-wrap justify-center gap-6">
           {OurBooksSection.cards.map((card, index) => (
-            <div
+            <Link
+              href={`/detailbook/${card?.title.replace(/\s+/g, '-')}`}
               key={index}
               className="flex w-full max-w-[404px] flex-col gap-5"
             >
@@ -39,7 +41,7 @@ const OurBooksSection = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

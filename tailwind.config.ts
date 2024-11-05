@@ -24,6 +24,9 @@ const config: Config = {
         lightBlack: '#323232',
         lightwhite: '#FFF8E6BF',
         lightyellow: '#FFF8E6',
+        offwhiteyellow: '#FBFAF6',
+        offWhiteBlack: '#D3D3D3',
+        lightBlue: ' #0C9BCB',
         mist: '#F1F1F1',
       },
       fontFamily: {
