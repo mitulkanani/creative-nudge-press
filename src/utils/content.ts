@@ -1,25 +1,27 @@
+import { Variant } from './types';
+
 export const navbarData = {
   logo: '/images/logoWithText.png',
   navlinks: [
     {
       title: 'Home',
-      link: '#',
+      link: '/',
     },
     {
       title: 'About',
-      link: '#',
+      link: '/about',
     },
     {
       title: 'Books',
-      link: '#',
+      link: '/book',
     },
     {
       title: 'Blog',
-      link: '#',
+      link: '/blog',
     },
     {
       title: 'Contact',
-      link: '#',
+      link: '/contact',
     },
   ],
   button: {
@@ -30,8 +32,11 @@ export const navbarData = {
 
 export const footerData = {
   title: 'Newsletter Signup',
+  title2: 'Stay Updated',
   description:
     'Join out mailing list and stay updated on book releases, behind-the-scenes content, and special offers including:',
+  description2:
+    'Join our mailing list to receive updates on new releases, author events, and special offers!',
   content: [
     '- Early access to new books',
     '- Exclusive artwork reveals',
@@ -444,4 +449,139 @@ export const blogPageData = {
       },
     ],
   },
+  educationResources: {
+    title: 'Educational Resources',
+    cards: [
+      {
+        cardTitle: 'For Parents and Educators',
+        description:
+          'Download our free guides on using Creative Nudge Press books in educational settings:',
+        descriptionDetails: [
+          'Discussion Guide: The Mumbai Street Siblings Series',
+          'Activity Workbook: The Day I Met... Series',
+          'Lesson Plans: Fostering Resilience Through Stories',
+        ],
+        button: {
+          btnText: 'Download Now',
+          btnLink: '#',
+        },
+      },
+      {
+        cardTitle: 'For Readers',
+        description:
+          'Enhance your reading experience with these complementary materials:',
+        descriptionDetails: [
+          'Character Exploration Worksheets',
+          'Reflection Journal Prompts',
+          'Creative Writing Exercises Inspired by Our Books',
+        ],
+        button: {
+          btnText: 'Access Resources',
+          btnLink: '#',
+          variant: Variant.OUTLINED,
+        },
+      },
+    ],
+    elements: [
+      { source: '/svg/plane.svg', width: 145, height: 94.04, alt: 'plane' },
+      {
+        source: '/svg/openedBook.svg',
+        width: 101.61,
+        height: 84,
+        alt: 'openedBook',
+      },
+    ],
+  },
+};
+
+export const contactPageData = {
+  herosection: {
+    title: 'Contact Us',
+    description:
+      "We'd love to hear from you! Get in touch with Creative Nudge Press.",
+    backgroundImg: '/images/commonHeroBg.png',
+    leftIcon: '/svg/star.svg',
+    rightIcon: '/svg/sparrowYellow.svg',
+  },
+  formData: {
+    name: {
+      label: 'name',
+      placeholder: 'Enter Your Name',
+    },
+    email: {
+      label: 'email',
+      type: 'email',
+      placeholder: 'Enter Your Email',
+    },
+    subject: {
+      label: 'subject',
+      placeholder: 'Enter the Subject',
+    },
+    message: {
+      label: 'message',
+      placeholder: 'Enter the Message',
+    },
+
+    btnText: 'Send Message',
+    btnLink: '#',
+    elements: [
+      {
+        source: '/svg/rainbow2.svg',
+        width: 153,
+        height: 90.71,
+        alt: 'rainbow',
+      },
+      {
+        source: '/svg/pencil.svg',
+        width: 193.98,
+        height: 200,
+        alt: 'pencil',
+      },
+      {
+        source: '/svg/multiplebooks.svg',
+        width: 281.54,
+        height: 202.37,
+        alt: 'books',
+      },
+    ],
+    leftElement: '/svg/plane.svg',
+    rightElement: '/svg/sparrow.svg',
+  },
+  socialLinks: [
+    {
+      title: 'Reach Us Directly',
+      links: [
+        {
+          icon: '/svg/email.svg',
+        },
+      ],
+      description: 'contact@creativenudge.net',
+    },
+    {
+      title: 'Connect with Us',
+      links: [
+        {
+          icon: '/svg/x.svg',
+          link: '#',
+          alt: 'twitter',
+        },
+        {
+          icon: '/svg/facebook.svg',
+          link: '#',
+          alt: 'facebook',
+        },
+        {
+          icon: '/svg/instagram.svg',
+          link: '#',
+          alt: 'instagram',
+        },
+        {
+          icon: '/svg/linkedIn.svg',
+          link: '#',
+          alt: 'linkedIn',
+        },
+      ],
+      description: 'Follow us for updates and engage with our content!',
+    },
+  ],
 };

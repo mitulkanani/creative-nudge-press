@@ -1,3 +1,5 @@
+import { ChangeEvent } from 'react';
+
 export type PropsHeroSectionCommon = {
   data: {
     title: string;
@@ -62,4 +64,33 @@ export interface BlogDetailsProps {
   params: {
     slug: string;
   };
+}
+
+export type PropsLabel = {
+  labelText: string;
+  style?: string;
+  error?: string;
+};
+
+export interface InputFieldProps {
+  name: string;
+  type?: string;
+  placeholder?: string;
+  value: string;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  error?: string;
+  touched?: boolean;
+  labelText: string;
+}
+
+export interface Link {
+  icon: string;
+  link?: string;
+  alt?: string;
+}
+
+export interface SocialLink {
+  title: string;
+  links: Link[];
+  description: string;
 }
