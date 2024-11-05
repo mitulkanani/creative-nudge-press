@@ -63,3 +63,48 @@ export interface BlogDetailsProps {
     slug: string;
   };
 }
+export interface herosectionProps {
+  title: string;
+  description: string;
+  backgroundImg: string;
+  leftIcon: string;
+  rightIcon: string;
+}
+
+export interface seriesOverviewProps {
+  heading: string;
+  desc: string;
+  cards: {
+    title: string;
+    points: string[];
+  }[];
+}
+export interface currentBookProps {
+  heading: string;
+  image: string;
+  title: string;
+  points: string[];
+  title1: string;
+  desc: string;
+  button: {
+    btnText: string;
+    btnLink: string;
+  };
+  cards: {
+    icon: string;
+    title: string;
+    desc: string;
+  }[];
+}
+export interface socialDataProps {
+  title: string;
+  lefticon: string;
+  righticon: string;
+  icons: {
+    id: number;
+    title: string;
+    username: string;
+    icon: string;
+    link: string;
+  }[];
+}
