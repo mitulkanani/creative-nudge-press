@@ -24,6 +24,7 @@ const config: Config = {
         lightBlack: '#323232',
         lightwhite: '#FFF8E6BF',
         lightyellow: '#FFF8E6',
+        mist: '#F1F1F1',
       },
       fontFamily: {
         lora: ['Lora', 'serif'],

@@ -1,4 +1,5 @@
 import Articles from '@/components/Blog/Articles';
+import EducationalResources from '@/components/Blog/EducationalResources';
 import ExploreOurContent from '@/components/Blog/ExploreOurContent';
 import HeroSection from '@/components/Common/HeroSection';
 import { blogPageData } from '@/utils/content';
@@ -11,6 +12,7 @@ const Blog = () => {
       <HeroSection data={herosection} isRightImgRotate={true} />
       <Articles />
       <ExploreOurContent />
+      <EducationalResources />
     </div>
   );
 };

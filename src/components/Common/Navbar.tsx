@@ -6,8 +6,8 @@ import Button from './Button';
 const Navbar = () => {
   const { button, logo, navlinks } = navbarData;
   return (
-    <div className="relative z-[999] bg-frost/80">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-6 backdrop-blur-[12px] xl:px-[90px]">
+    <div className="relative z-[999] bg-frost/80 backdrop-blur-md">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-6 xl:px-[90px]">
         <Link href="/">
           <Image src={logo} alt="logo" width={112} height={64} />
         </Link>
