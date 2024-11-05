@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Navbar from '@/components/Common/Navbar';
-import Footer from '@/components/Common/Footer';
+import NavbarFooter from '@/components/Common/NavbarFooter';
 
 export const metadata: Metadata = {
   title: 'Creative Nudge Press',
@@ -19,9 +18,7 @@ export default function RootLayout({
         <link rel="icon" href="/svg/logo.svg" type="image/svg" sizes="any" />
       </head>
       <body className={`font-lora`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <NavbarFooter>{children}</NavbarFooter>
       </body>
     </html>
   );

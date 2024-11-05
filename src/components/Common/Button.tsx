@@ -17,11 +17,11 @@ const Button = ({
     }
   };
 
-  const baseStyles = `w-fit rounded-[4px] px-5  py-[14px] font-lora font-normal leading-[20.48px]  transition-all disabled:opacity-50 ${style}`;
+  const baseStyles = `w-fit rounded-[4px] px-5  py-[14px] font-lora font-normal leading-[20.48px] transition-all disabled:opacity-50 ${style}`;
 
   const variantStyles: Record<Variant, string> = {
     [Variant.PRIMARY]: `bg-cyanBlue text-white `,
-    [Variant.OUTLINED]: `bg-transparent text-darkBlue border border-cyanBlue hover:bg-cyanBlue hover:text-white focus:bg-cyanBlue focus:text-white active:bg-darkBlue active:text-white`,
+    [Variant.OUTLINED]: `bg-transparent text-cyanBlue border-[1.5px] border-cyanBlue `,
   };
 
   return (

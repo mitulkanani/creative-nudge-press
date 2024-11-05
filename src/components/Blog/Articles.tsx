@@ -22,14 +22,14 @@ const Articles = () => {
           {articles?.blogs.map((card, index) => (
             <div
               key={index}
-              className="flex w-full flex-col gap-5 md:max-w-[404px]"
+              className="flex w-full flex-col items-center gap-5 md:max-w-[404px]"
             >
               <Image
                 src={card.image}
-                alt=""
+                alt="blogCard"
                 width={404}
                 height={350}
-                className="h-full w-full md:max-h-[350px] md:max-w-[404px]"
+                className="h-full w-fit md:max-h-[350px] md:max-w-[404px]"
               />
               <div className="flex flex-col gap-5">
                 <div className="flex flex-col gap-1">
