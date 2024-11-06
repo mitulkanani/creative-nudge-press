@@ -331,7 +331,7 @@ export const Book = {
     cards: [
       {
         id: 1,
-        image: '/svg/inspiration.svg',
+        image: '/svg/Inspiration.svg',
         title: 'Inspiration',
         desc: 'Our stories spark creativity and motivation, encouraging readers to dream big and pursue their passions.',
       },
