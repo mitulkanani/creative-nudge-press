@@ -9,13 +9,16 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "lint:strict": "next lint '*/**/*.{js,jsx,ts,tsx}'",
-    "format": "prettier --write 'src/**/*.{json,ts,tsx,css,md}'",
+    "format": "prettier --write 'src/**/*.{json,ts,tsx,css,md,mdx}'",
     "prepare": "husky",
     "check-format": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\""
   },
   "dependencies": {
     "formik": "^2.4.6",
+    "gray-matter": "^4.0.3",
+    "markdown-to-jsx": "^7.5.0",
     "next": "15.0.2",
+    "next-mdx-remote": "^5.0.0",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
     "yup": "^1.4.0"
