@@ -9,7 +9,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "lint:strict": "next lint '*/**/*.{js,jsx,ts,tsx}'",
-    "format": "prettier --write 'src/**/*.{json,ts,tsx,css,md}'",
+    "format": "prettier --write 'src/**/*.{json,ts,tsx,css,md,mdx}'",
     "prepare": "husky",
     "check-format": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\""
   },
