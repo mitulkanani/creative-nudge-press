@@ -6,7 +6,20 @@ import Heading1 from '../Common/Heading1';
 import Heading3 from '../Common/Heading3';
 import Link from 'next/link';
 
-const Articles = () => {
+const Articles = ({
+  postMetaData,
+}: {
+  postMetaData: {
+    title: string;
+    description: string;
+    coverImage: string;
+    date?: string;
+    backgroundImage: string;
+    btnText: string;
+    slug: string;
+    author: string;
+  }[];
+}) => {
   const { articles } = blogPageData;
   return (
     <div className="mx-auto w-full max-w-[1440px] px-5 pt-10 md:pt-[84px] xl:px-[90px]">
@@ -19,13 +32,13 @@ const Articles = () => {
           />
         </div>
         <div className="grid items-stretch justify-center gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {articles?.blogs.map((card, index) => (
+          {postMetaData?.map((card, index) => (
             <div
               key={index}
               className="flex w-full flex-col items-center gap-5 md:max-w-[404px]"
             >
               <Image
-                src={card.image}
+                src={card.coverImage}
                 alt="blogCard"
                 width={404}
                 height={350}
@@ -38,11 +51,14 @@ const Articles = () => {
                     style="!text-[20px] !leading-[25.6px] !font-normal line-clamp-1"
                   />
                   <div className="flex flex-col">
-                    <Description2 description={card?.description} />
+                    <Description2
+                      description={card?.description}
+                      style="line-clamp-2"
+                    />
                   </div>
                 </div>
                 <Link
-                  href={`/blog/${card?.id}`}
+                  href={`/blog/${card?.slug}`}
                   className="text-base font-semibold text-cyanBlue"
                 >
                   {card?.btnText}

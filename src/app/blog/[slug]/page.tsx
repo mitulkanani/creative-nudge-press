@@ -1,39 +1,65 @@
-import Description2 from '@/components/Common/Description2';
-import Heading3 from '@/components/Common/Heading3';
-import { blogPageData } from '@/utils/content';
-import Image from 'next/image';
+import BlogHeroSection from '@/components/Blog/BlogHeroSection';
+import getPostMetaData from '@/utils/helper/getPostMetadata';
+import { BlogHerosectionProps } from '@/utils/types';
+import fs from 'fs';
+import matter from 'gray-matter';
+import Markdown from 'markdown-to-jsx';
 
 type Params = Promise<{ slug: string[] }>;
+
+function getPostContent(slug: string[]) {
+  const folder = 'src/content/blog/';
+  const file = folder + `${slug}.mdx`;
+  const content = fs.readFileSync(file, 'utf8');
+  const matterResult = matter(content);
+  return matterResult;
+}
+
+export const generateStaticParams = async () => {
+  const posts = getPostMetaData('src/content/blog');
+  return posts?.map((post) => ({
+    slug: post?.slug,
+  }));
+};
+
+// export async function generateMetaData({
+//   params,
+// }: {
+//   params: {
+//     slug: string;
+//   };
+// }): Promise<Metadata> {
+//   const par = await params;
+//   const id = par?.slug ? '.' + par?.slug : '';
+//   return {
+//     title: `Creative Nudge Press 1 ${id?.replaceAll('_', ' ')} ''}`,
+//   };
+// }
+
 const BlogDetails = async ({ params }: { params: Params }) => {
   const { slug } = await params;
-  const { articles } = blogPageData;
-  const blog = articles?.blogs.find((item) => item?.id === Number(slug));
+  const post = getPostContent(slug);
+
+  const herosectionData: BlogHerosectionProps = {
+    title: post?.data.title ?? '',
+    description: post?.data.description ?? '',
+    heroBackground: post?.data.heroBackground,
+    leftIcon: post?.data.leftIcon,
+    rightIcon: post?.data.rightIcon,
+    author: post?.data.author,
+    btnText: post?.data.btnText,
+    coverImage: post?.data.coverImage,
+    date: post?.data.date,
+    id: post?.data.id,
+  };
 
   return (
-    <div className="my-20 flex items-center justify-center">
-      {blog && (
-        <div className="flex w-full max-w-[404px] flex-col gap-5">
-          <Image
-            src={blog.image}
-            alt=""
-            width={404}
-            height={350}
-            className="h-full max-h-[350px] w-full max-w-[404px]"
-          />
-          <div className="flex flex-col gap-5">
-            <div className="flex flex-col gap-1">
-              <Heading3
-                title={blog.title}
-                style="!text-[20px] !leading-[25.6px] !font-normal line-clamp-1"
-              />
-              <div className="flex flex-col">
-                <Description2 description={blog.description} />
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
+    <main className="flex flex-col gap-[100px]">
+      <BlogHeroSection herosection={herosectionData} />
+      <article className="mx-auto max-w-[1440px] px-5">
+        <Markdown>{post?.content}</Markdown>
+      </article>
+    </main>
   );
 };
 
