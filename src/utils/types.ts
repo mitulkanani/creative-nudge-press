@@ -122,6 +122,7 @@ export interface InputFieldProps {
   type?: string;
   placeholder?: string;
   value: string;
+  // eslint-disable-next-line no-unused-vars
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   error?: string;
   touched?: boolean;
@@ -138,4 +139,16 @@ export interface SocialLink {
   title: string;
   links: Link[];
   description: string;
+}
+export interface BlogHerosectionProps {
+  title: string;
+  description: string;
+  heroBackground?: string;
+  leftIcon?: string;
+  rightIcon?: string;
+  author?: string;
+  btnText?: string;
+  coverImage?: string;
+  date?: string;
+  id?: string | number;
 }

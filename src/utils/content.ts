@@ -858,3 +858,58 @@ export const detailBooksData = [
     ],
   },
 ];
+
+// export const detailedBlogs = [
+//   {
+//     id: 1,
+//     title:
+//       "Why Great Children's Stories Matter: Building Empathy Through Literature",
+//     description:
+//       'Explore how thoughtfully crafted stories can help children understand different perspectives and build empathy in an increasingly complex world.',
+//     date: '2024-03-15',
+//     author: 'Karina Varnum',
+//     coverImage: '/images/blog/children-reading-circle.jpg',
+//     heroBackground: '/images/blog/childrens-reading-circle.png',
+//     readingTime: '8 min read',
+//     featuredImages: [
+//       {
+//         src: '/images/blog/global-city-illustration.jpg',
+//         alt: 'Illustration of a vibrant global city with floating books',
+//         caption: 'Stories connect us across cultures and experiences',
+//       },
+//       {
+//         src: '/images/blog/window-contemplation.jpg',
+//         alt: 'Child sitting by window looking out at nature',
+//         caption: 'Quiet moments of reflection in literature',
+//       },
+//       {
+//         src: '/images/blog/tree-adventure.jpg',
+//         alt: 'Children playing around a magical tree',
+//         caption: 'Adventures that spark imagination and understanding',
+//       },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     title:
+//       'Explore how thoughtfully crafted stories can help children understand different',
+//     description:
+//       'Explore how thoughtfully crafted stories can help children understand different perspectives and build empathy in an increasingly complex world.',
+//     date: '2024-03-15',
+//     author: 'Karina Varnum',
+//     coverImage: '/images/blog/children-reading-circle.jpg',
+//     heroBackground: '/images/blog/childrens-reading-circle.png',
+//     readingTime: '8 min read',
+//   },
+//   {
+//     id: 3,
+//     title: ' Building Empathy Through Literature',
+//     description:
+//       'Explore how thoughtfully crafted stories can help children understand different perspectives and build empathy in an increasingly complex world.',
+//     date: '2024-03-15',
+//     author: 'Karina Varnum',
+//     coverImage: '/images/blog/children-reading-circle.jpg',
+//     heroBackground: '/images/blog/childrens-reading-circle.png',
+//     readingTime: '8 min read',
+//   },
+// ];
