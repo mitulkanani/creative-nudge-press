@@ -35,6 +35,23 @@ export type PropsImageWithText = {
   };
   style?: string;
 };
+export type upcomingBooksProps = {
+  data: {
+    id: number;
+    title: string;
+    description: string[];
+    sideImage: string;
+    imgOrder: number;
+    textOrder: number;
+    isTextBgWhite: boolean;
+    leftIcon?: string;
+    rightIcon?: string;
+    keymessage?: {
+      key: string;
+      value: string;
+    };
+  };
+};
 
 export type ButtonProps = {
   label: string;
@@ -77,6 +94,7 @@ export interface seriesOverviewProps {
   heading: string;
   desc: string;
   cards: {
+    icon: string;
     title: string;
     points: string[];
   }[];
@@ -138,4 +156,25 @@ export interface SocialLink {
   title: string;
   links: Link[];
   description: string;
+}
+
+export interface behindTheScenesProps {
+  title: string;
+  lefticon: string;
+  righticon: string;
+  centericon: string;
+  images: string[];
+}
+
+export interface moreInformationsProps {
+  title: string;
+  desc: string;
+  cards:
+    | {
+        icon: string;
+        title: string;
+        desc: string;
+        points: string[];
+      }[]
+    | [];
 }

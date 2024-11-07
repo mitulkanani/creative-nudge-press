@@ -596,14 +596,15 @@ export const detailBooksData = [
       description:
         "Follow three remarkable siblings as they turn Mumbai's bustling streets into a world of adventure, resilience, and love.",
       backgroundImg: '/images/bookdetailherobg.png',
-      leftIcon: '/svg/star.svg',
-      rightIcon: '/svg/sparrowYellow.svg',
+      leftIcon: '/svg/book.svg',
+      rightIcon: '/svg/rainbow2.svg',
     },
     seriesOverview: {
       heading: 'Series Overview',
       desc: "Welcome to the world of the Mumbai Street Siblings, where everyday challenges become extraordinary adventures. Meet Anita (12), Sunita (6), and Amit (4) – three siblings whose unbreakable bond helps them navigate life on Mumbai's vibrant streets with courage, creativity, and joy",
       cards: [
         {
+          icon: '/svg/starboost.svg',
           title: 'Key Series Themes',
           points: [
             'Sibling love and protection',
@@ -615,6 +616,7 @@ export const detailBooksData = [
           ],
         },
         {
+          icon: '/svg/profileuser.svg',
           title: 'Reading Level & Audience',
           points: [
             'Age Range: 3-8 years',
@@ -668,78 +670,91 @@ export const detailBooksData = [
         },
       ],
     },
-    upcomingBooksTitle: 'Upcoming Books',
-    upcomingBooks: [
-      {
-        id: 1,
-        title: "Amit's Sweet Surprise",
-        desc: [
-          'When the monsoon rains arrive in Mumbai, the siblings must use their creativity and resourcefulness to find shelter. A story about adaptability, teamwork, and finding comfort in each other despite challenging weather.',
-        ],
-        image: '/images/monsoonshelter.png',
-        imgOrder: 1,
-        textOrder: 2,
-        isTextBgWhite: true,
 
-        keymessage: {
-          key: 'Upcoming Books',
-          value: '',
+    upcomingBooks: {
+      title: 'Upcoming Books',
+      bgColor: 'cyanBlue',
+      cards: [
+        {
+          id: 1,
+          title: "Amit's Sweet Surprise",
+          description: [
+            'When the monsoon rains arrive in Mumbai, the siblings must use their creativity and resourcefulness to find shelter. A story about adaptability, teamwork, and finding comfort in each other despite challenging weather.',
+          ],
+          sideImage: '/images/monsoonsheltermumbai.png',
+          imgOrder: 1,
+          textOrder: 2,
+          isTextBgWhite: false,
+          leftIcon: '/svg/redsparrow.svg',
+          rightIcon: '/svg/redbooks.svg',
+
+          keymessage: {
+            key: '────  Upcoming Books  ──── ',
+            value: '',
+          },
         },
-      },
-      {
-        id: 2,
-        title: 'Diwali Delights',
-        desc: [
-          "Experience the magic of India's festival of lights through the eyes of Anita, Sunita, and Amit as they find unique ways to participate in the celebrations. A tale of community, joy, and creating light in unexpected places.",
-        ],
-        image: '/images/monsoonshelter.png',
-        imgOrder: 2,
-        textOrder: 1,
-        isTextBgWhite: false,
-        keymessage: {
-          key: 'Upcoming Books',
-          value: '',
+        {
+          id: 2,
+          title: 'Diwali Delights',
+          description: [
+            "Experience the magic of India's festival of lights through the eyes of Anita, Sunita, and Amit as they find unique ways to participate in the celebrations. A tale of community, joy, and creating light in unexpected places.",
+          ],
+          sideImage: '/images/diwalidelights.png',
+          imgOrder: 2,
+          textOrder: 1,
+          isTextBgWhite: true,
+          leftIcon: '/svg/starhappy.svg',
+
+          keymessage: {
+            key: '────  Upcoming Books  ────',
+            value: '',
+          },
         },
-      },
-      {
-        id: 3,
-        title: 'Karina Vunnam',
-        desc: [
-          "Bringing Mumbai's Heart to Life",
-          "This series springs from the vibrant memories of Karina Vunnam's own childhood adventures on the streets of Mumbai with her siblings. Growing up, Karina treasured the sweet moments shared with her family, even in challenging circumstances. Recognizing how stories about street children often focus solely on hardship, she felt called to share a different perspective—one filled with joy, love, and the everyday magic of childhood.",
-          '"I wanted to show that beauty exists everywhere, even in unexpected places," says Karina.',
-          `"These stories celebrate the resilience of children and the power of sibling bonds while giving voice to a community often overlooked in children's literature."`,
-        ],
-        image: '/images/monsoonshelter.png',
-        imgOrder: 1,
-        textOrder: 2,
-        isTextBgWhite: true,
-        keymessage: {
-          key: '',
-          value: '',
+        {
+          id: 3,
+          title: 'Karina Vunnam',
+          description: [
+            "Bringing Mumbai's Heart to Life",
+            "This series springs from the vibrant memories of Karina Vunnam's own childhood adventures on the streets of Mumbai with her siblings. Growing up, Karina treasured the sweet moments shared with her family, even in challenging circumstances. Recognizing how stories about street children often focus solely on hardship, she felt called to share a different perspective—one filled with joy, love, and the everyday magic of childhood.",
+            '"I wanted to show that beauty exists everywhere, even in unexpected places," says Karina.',
+            `"These stories celebrate the resilience of children and the power of sibling bonds while giving voice to a community often overlooked in children's literature."`,
+          ],
+          sideImage: '/images/karinavunnam.png',
+          imgOrder: 1,
+          textOrder: 2,
+          isTextBgWhite: false,
+
+          rightIcon: '/svg/sparrowYellow.svg',
+
+          keymessage: {
+            key: '',
+            value: '',
+          },
         },
-      },
-      {
-        id: 4,
-        title: 'Trần Hà Trang',
-        desc: [
-          "Capturing Mumbai's Magic",
-          "Hà Trang, an independent artist from Vietnam, brings the vibrant world of Mumbai to life through her enchanting illustrations. Her passion for art, which began in childhood, has evolved into a celebrated career in book cover and children's book illustration.",
-          `"This story touched my heart deeply," Ha Trang shares. "While illustrating Amit's Sweet Surprise, I discovered not just India's rich visual culture, but the universal language of family love and childhood wonder. Each illustration is crafted to capture both the energy of Mumbai's streets and the tender moments between siblings."`,
-        ],
-        image: '/images/monsoonshelter.png',
-        imgOrder: 2,
-        textOrder: 1,
-        isTextBgWhite: false,
-        keymessage: {
-          key: '',
-          value: '',
+        {
+          id: 4,
+          title: 'Trần Hà Trang',
+          description: [
+            "Capturing Mumbai's Magic",
+            "Hà Trang, an independent artist from Vietnam, brings the vibrant world of Mumbai to life through her enchanting illustrations. Her passion for art, which began in childhood, has evolved into a celebrated career in book cover and children's book illustration.",
+            `"This story touched my heart deeply," Ha Trang shares. "While illustrating Amit's Sweet Surprise, I discovered not just India's rich visual culture, but the universal language of family love and childhood wonder. Each illustration is crafted to capture both the energy of Mumbai's streets and the tender moments between siblings."`,
+          ],
+          sideImage: '/images/mumbaitrang.png',
+          imgOrder: 2,
+          textOrder: 1,
+          isTextBgWhite: true,
+          leftIcon: '/svg/sparrow.svg',
+
+          keymessage: {
+            key: '',
+            value: '',
+          },
         },
-      },
-    ],
+      ],
+    },
     socialData: {
       title: "Follow Ha Trang's artistic journey",
-      lefticon: '/svg/starr.svg',
+      lefticon: '/svg/star.svg',
       righticon: '/svg/plane.svg',
       icons: [
         {
@@ -776,15 +791,16 @@ export const detailBooksData = [
       title: "Face Life's Challenges with Wonder",
       description:
         'A magical trilogy helping children discover their inner strength through fantastical adventures.',
-      backgroundImg: '/images/bookdetailherobg.png',
-      leftIcon: '/svg/star.svg',
-      rightIcon: '/svg/sparrowYellow.svg',
+      backgroundImg: '/images/thDayIMetTheSeriesHero.png',
+      leftIcon: '/svg/blueplane.svg',
+      rightIcon: '/svg/starhappy.svg',
     },
     seriesOverview: {
       heading: 'Series Overview',
       desc: "The Day I Met... series transforms life's biggest challenges into enchanting adventures. Through surreal landscapes and metaphorical companions, young readers learn to face their fears, overcome obstacles, and weather emotional storms with courage and resilience.",
       cards: [
         {
+          icon: '/svg/starboost.svg',
           title: 'Key Series Themes',
           points: [
             '    Surrealist artwork and imaginative storytelling',
@@ -795,6 +811,7 @@ export const detailBooksData = [
           ],
         },
         {
+          icon: '/svg/profileuser.svg',
           title: 'Reading Level & Audience',
           points: [
             ' Age Range: 4-9 years',
@@ -805,56 +822,105 @@ export const detailBooksData = [
         },
       ],
     },
-    upcomingBooksTitle: 'The Books',
-    upcomingBooks: [
-      {
-        id: 1,
-        title: 'The Day I Met the Abyss',
-        desc: [
-          'Face the unknown with courage! When a child encounters a swirling void of uncertainty, they learn that what seems scary at first might hold unexpected possibilities. A story about turning fear into discovery.',
-        ],
-        image: '/images/monsoonshelter.png',
-        imgOrder: 1,
-        textOrder: 2,
-        isTextBgWhite: false,
 
-        keymessage: {
-          key: 'Key Message:',
-          value: 'Leap into possibility!',
-        },
-      },
-      {
-        id: 2,
-        title: 'The Day I Met the Wall',
-        desc: [
-          'Sometimes we all face obstacles that seem too big to overcome. Join our hero as they learn to break down big challenges into smaller steps, discovering that every wall can become a climbing adventure.',
-        ],
-        image: '/images/monsoonshelter.png',
-        imgOrder: 2,
-        textOrder: 1,
-        isTextBgWhite: true,
+    upcomingBooks: {
+      title: 'The Books',
+      bgColor: 'yellowish',
+      cards: [
+        {
+          id: 1,
+          title: 'The Day I Met the Abyss',
+          description: [
+            'Face the unknown with courage! When a child encounters a swirling void of uncertainty, they learn that what seems scary at first might hold unexpected possibilities. A story about turning fear into discovery.',
+          ],
+          sideImage: '/images/theDayIMetTheAbyss.png',
+          imgOrder: 1,
+          textOrder: 2,
+          isTextBgWhite: true,
 
-        keymessage: {
-          key: 'Key Message:',
-          value: 'Climb towards growth!',
+          keymessage: {
+            key: 'Key Message:',
+            value: '"Leap into possibility!"',
+          },
         },
-      },
-      {
-        id: 3,
-        title: 'The Day I Met the Tempest',
-        desc: [
-          'Weather any storm with resilience! Experience how our protagonist learns to find calm within chaos and understand that all storms, no matter how fierce, eventually pass.',
-        ],
-        image: '/images/monsoonshelter.png',
-        imgOrder: 1,
-        textOrder: 2,
-        isTextBgWhite: false,
+        {
+          id: 2,
+          title: 'The Day I Met the Wall',
+          description: [
+            'Sometimes we all face obstacles that seem too big to overcome. Join our hero as they learn to break down big challenges into smaller steps, discovering that every wall can become a climbing adventure.',
+          ],
+          sideImage: '/images/theDayIMetTheWall.png',
+          imgOrder: 2,
+          textOrder: 1,
+          isTextBgWhite: false,
 
-        keymessage: {
-          key: 'Key Message:',
-          value: 'Weather any storm!',
+          keymessage: {
+            key: 'Key Message:',
+            value: '"Climb towards growth!"',
+          },
         },
-      },
-    ],
+        {
+          id: 3,
+          title: 'The Day I Met the Tempest',
+          description: [
+            'Weather any storm with resilience! Experience how our protagonist learns to find calm within chaos and understand that all storms, no matter how fierce, eventually pass.',
+          ],
+          sideImage: '/images/theDayIMetTheTempest.png',
+          imgOrder: 1,
+          textOrder: 2,
+          isTextBgWhite: true,
+
+          keymessage: {
+            key: 'Key Message:',
+            value: '"Weather any storm!"',
+          },
+        },
+      ],
+    },
+    moreInformations: {
+      title: 'More Informations',
+      desc: 'Another informations about The Day I Met... Series',
+      cards: [
+        {
+          icon: '/svg/kickstarter.svg',
+          title: 'Kickstarter Coming Soon!',
+          desc: 'Be part of bringing these magical stories to life! Our Kickstarter campaign will feature:',
+          points: [
+            ' - Early bird specials',
+            '- Exclusive artwork',
+            '- Behind-the-scenes content',
+            '- Special edition copies',
+            ' - Educational resources',
+            '- Community engagement opportunities',
+          ],
+        },
+        {
+          icon: '/svg/educationalResources.svg',
+          title: 'Educational Resources',
+          desc: 'Each book comes with:',
+          points: [
+            '   - Detailed discussion guides',
+            '- Emotion exploration activities',
+            '- Mindfulness exercises',
+            ' - Creative writing prompts',
+            '- Art therapy suggestions',
+            '- Classroom activity ideas',
+          ],
+        },
+        {
+          icon: '/svg/impact.svg',
+          title: 'Impact',
+          desc: 'The Day I Met... series helps children:',
+          points: [
+            '  - Develop emotional vocabulary',
+            ' - Build resilience and coping skills',
+            '- Understand complex feelings',
+            ' - Practice problem-solving',
+            '- Boost self-confidence',
+            '- Connect with others through shared experiences',
+          ],
+        },
+      ],
+    },
   },
 ];
