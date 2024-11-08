@@ -191,3 +191,43 @@ export interface BlogHerosectionProps {
   date?: string;
   id?: string | number;
 }
+
+export type BlogPost = {
+  slug: string;
+  title: string;
+  date: string;
+  author: string;
+  content: string;
+  description?: string; // Make description optional
+  coverImage?: string;
+  additionalImages?: string[];
+  tags?: string[];
+  readingTime?: string;
+  heroBackground?: string;
+  featuredImages?: {
+    src: string;
+    alt: string;
+    caption: string;
+  }[];
+  leftIcon?: string;
+  rightIcon?: string;
+  btnText?: string;
+};
+
+export interface PostPageParams {
+  params: Promise<{
+    slug: string[];
+  }>;
+}
+
+export type PropsBlogImageWithText = {
+  coverImage: string;
+  title: string;
+  description: string;
+  keywords?: string;
+  className?: string;
+  imageOrder?: number;
+  imageWidth?: number;
+  imageHeight?: number;
+  alt?: string;
+};

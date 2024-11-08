@@ -1,37 +1,34 @@
-import { BlogHerosectionProps } from '@/utils/types';
+import { BlogPost } from '@/utils/types';
 import Image from 'next/image';
 import Description1 from '../Common/Description1';
 import Heading2 from '../Common/Heading2';
 
-const BlogHeroSection = ({
-  herosection,
-}: {
-  herosection: BlogHerosectionProps;
-}) => {
-  console.log(herosection, 'hero');
+const BlogHeroSection = ({ herosection }: { herosection: BlogPost }) => {
   return (
     <div
-      className={`relative -mt-[112px] flex h-full min-h-[808px] w-full justify-center`}
+      className={`relative -mt-[112px] flex h-full w-full justify-center md:min-h-[808px]`}
     >
-      {herosection?.heroBackground && (
+      {herosection?.heroBackground ? (
         <Image
           fill
           alt="herosection bg"
           src={herosection?.heroBackground}
           className="inset-0 h-full w-full object-cover xl:object-fill"
         />
-      )}
+      ) : null}
 
       <div className="mx-auto flex h-fit w-full max-w-[1440px] justify-center px-5">
-        <div className="relative mb-[109px] mt-[278px] flex w-fit flex-col items-center gap-2 rounded-3xl bg-lightyellow/75 p-[72px] backdrop-blur-md">
+        <div className="relative my-40 flex w-fit flex-col items-center gap-2 rounded-3xl bg-lightyellow/75 px-5 py-10 backdrop-blur-md md:mb-[109px] md:mt-[278px] md:p-[72px]">
           <Heading2
             title={herosection?.title}
-            style="text-center max-w-[800px] !text-[32px] !leading-[40.96px]"
+            style="text-center max-w-[800px] !text-xl !leading-6 md:!text-[32px] md:!leading-[40.96px]"
           />
-          <Description1
-            description={herosection?.description}
-            style="text-center max-w-[800px] "
-          />
+          {herosection?.description ? (
+            <Description1
+              description={herosection?.description}
+              style="text-center max-w-[800px] "
+            />
+          ) : null}
 
           <Image
             width={66.69}

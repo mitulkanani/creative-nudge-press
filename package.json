@@ -3,17 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next lint && next dev --turbo",
+    "dev": "next lint && next dev",
     "build": "next lint  && next build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "lint:strict": "next lint '*/**/*.{js,jsx,ts,tsx}'",
-    "format": "prettier --write 'src/**/*.{json,ts,tsx,css,md,mdx}'",
+    "format": "prettier --write 'src/**/*.{json,ts,tsx,css}'",
     "prepare": "husky",
-    "check-format": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\""
+    "check-format": "prettier --check \"**/*.{ts,tsx,js,jsx,css,yaml,yml}\""
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.15",
     "formik": "^2.4.6",
     "gray-matter": "^4.0.3",
     "markdown-to-jsx": "^7.5.0",
@@ -21,6 +22,11 @@
     "next-mdx-remote": "^5.0.0",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-pretty-code": "^0.14.0",
+    "rehype-slug": "^6.0.0",
+    "shiki": "^1.22.2",
+    "velite": "^0.2.1",
     "yup": "^1.4.0"
   },
   "devDependencies": {

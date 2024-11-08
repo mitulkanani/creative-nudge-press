@@ -4,7 +4,7 @@ import React from 'react';
 const Heading3 = ({ title, style }: PropsHeading) => {
   return (
     <h2
-      className={`${style} font-lora text-xl font-medium text-darkBlack md:text-2xl md:!leading-[30.72px]`}
+      className={`${style || ''} w-full font-lora text-xl font-medium text-darkBlack md:text-2xl md:!leading-[30.72px]`}
     >
       {title}
     </h2>

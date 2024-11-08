@@ -3,3 +3,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.blog li {
+  margin: 0 !important;
+  padding-inline-start: 0 !important;
+}
+
+.blog ol {
+  padding-inline-start: 20px !important;
+}
+.blog ul {
+  padding-inline-start: 14px !important;
+  margin: 0;
+}
+
+.dashed-list ul li::marker {
+  content: '– ';
+  color: #727272;
+}
+
+.dashed-list ul {
+  list-style-type: none; /* remove default bullet points */
+}
