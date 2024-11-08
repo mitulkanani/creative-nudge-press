@@ -35,7 +35,7 @@ const Navbar = () => {
           <Button
             label={button?.btnText}
             link={button?.btnLink}
-            style="hidden md:block"
+            style="hidden md:block cursor-pointer"
           />
           <button
             onClick={handleHamBurgerClick}

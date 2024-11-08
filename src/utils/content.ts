@@ -26,7 +26,7 @@ export const navbarData = {
   ],
   button: {
     btnText: 'Explore Our Books',
-    btnLink: '#',
+    btnLink: '/book',
   },
 };
 
@@ -599,9 +599,14 @@ export const detailBooksData = [
       leftIcon: '/svg/book.svg',
       rightIcon: '/svg/rainbow2.svg',
     },
+
     seriesOverview: {
       heading: 'Series Overview',
       desc: "Welcome to the world of the Mumbai Street Siblings, where everyday challenges become extraordinary adventures. Meet Anita (12), Sunita (6), and Amit (4) – three siblings whose unbreakable bond helps them navigate life on Mumbai's vibrant streets with courage, creativity, and joy",
+      videoSection: {
+        title: 'Mumbai Street Siblings Series',
+        videoLink: '/videos/mumbaiStreet.mp4',
+      },
       cards: [
         {
           icon: '/svg/starboost.svg',

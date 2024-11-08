@@ -4,6 +4,7 @@ import Description2 from './Common/Description2';
 import Heading3 from './Common/Heading3';
 import { seriesOverviewProps } from '@/utils/types';
 import Image from 'next/image';
+import TitleWithVideo from './TitleWithVideo';
 
 const SeriesOverview = ({
   seriesOverview,
@@ -18,7 +19,14 @@ const SeriesOverview = ({
           style="!text-white !text-center"
         />
       </div>
+
       <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-16 px-5 py-[100px] xl:px-[148px]">
+        {seriesOverview?.videoSection ? (
+          <TitleWithVideo
+            videoLink={seriesOverview?.videoSection?.videoLink}
+            title={seriesOverview.videoSection?.title}
+          />
+        ) : null}
         <Description2
           description={seriesOverview?.desc}
           style="!max-w-[904px] !w-full  !text-center !mx-auto "

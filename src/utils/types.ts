@@ -93,6 +93,10 @@ export interface herosectionProps {
 export interface seriesOverviewProps {
   heading: string;
   desc: string;
+  videoSection?: {
+    title: string;
+    videoLink: string;
+  };
   cards: {
     icon: string;
     title: string;

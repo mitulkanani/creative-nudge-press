@@ -19,7 +19,7 @@ const Articles = ({ postMetaData }: { postMetaData: BlogPost[] }) => {
             style="!leading-[24px]"
           />
         </div>
-        <div className="grid items-stretch justify-center gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid justify-center gap-6 md:grid-cols-2 lg:grid-cols-3">
           {postMetaData?.map((card, index) => (
             <div
               key={index}
@@ -31,7 +31,7 @@ const Articles = ({ postMetaData }: { postMetaData: BlogPost[] }) => {
                   alt="blogCard"
                   width={404}
                   height={350}
-                  className="h-full w-fit md:max-h-[350px] md:max-w-[404px]"
+                  className="h-full w-full md:max-h-[350px] md:max-w-[404px]"
                 />
               )}
               <div className="flex flex-col gap-5">

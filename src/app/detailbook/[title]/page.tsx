@@ -28,6 +28,7 @@ const BookDetailPage = async ({ params }: { params: Params }) => {
       {selectedSeries?.seriesOverview && (
         <SeriesOverview seriesOverview={selectedSeries?.seriesOverview} />
       )}
+
       {selectedSeries?.currentBook && (
         <CurrentBook currentBook={selectedSeries?.currentBook} />
       )}
