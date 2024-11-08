@@ -257,7 +257,7 @@ export const HomeHeroData = {
     subdescritpion:
       "If you have a manuscript that aligns with our mission to inspire, educate, and empower readers, we'd love to hear from you!",
     button: {
-      btnlink: '',
+      btnlink: '/contact',
       label: 'Contact Us About Your Manuscript',
       variant: '',
     },

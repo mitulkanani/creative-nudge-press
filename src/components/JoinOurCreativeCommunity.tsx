@@ -38,7 +38,10 @@ const JoinOurCreativeCommunity = () => {
             />
           </div>
         </div>
-        <Button label={JoinOurCreativeCommunitySection?.button?.label} />
+        <Button
+          label={JoinOurCreativeCommunitySection?.button?.label}
+          link={JoinOurCreativeCommunitySection?.button?.btnlink}
+        />
         <Image
           src={'/images/flowerlayer.png'}
           alt=""
