@@ -31,8 +31,25 @@ const ContactForm = () => {
       message: '',
     },
     validationSchema,
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log(values);
+      // try {
+      //   const response = await fetch('/api/contact', {
+      //     method: 'POST',
+      //     headers: {
+      //       'Content-Type': 'application/json',
+      //     },
+      //     body: JSON.stringify(values),
+      //   });
+      //   const data = await response.json();
+      //   if (response.ok) {
+      //     console.log(data.message);
+      //   } else {
+      //     console.error(data.message);
+      //   }
+      // } catch (error) {
+      //   console.error('An error occurred:', error);
+      // }
     },
   });
   return (

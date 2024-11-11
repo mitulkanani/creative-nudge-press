@@ -5,7 +5,6 @@ import HeroSection from '@/components/Common/HeroSection';
 import ImageWithText from '@/components/Common/ImageWithText';
 import { aboutPageData } from '@/utils/content';
 import React from 'react';
-
 const About = () => {
   const { herosection, ourStory, ourFoundation } = aboutPageData;
   return (

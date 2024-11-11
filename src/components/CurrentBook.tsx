@@ -41,7 +41,10 @@ const CurrentBook = ({ currentBook }: { currentBook: currentBookProps }) => {
               />
               <Description2 description={currentBook?.desc} />
             </div>
-            <Button label={currentBook?.button?.btnText} />
+            <Button
+              label={currentBook?.button?.btnText}
+              link={currentBook.button?.btnLink}
+            />
           </div>
         </div>
         <div className="flex flex-wrap justify-center gap-6">

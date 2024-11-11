@@ -37,14 +37,14 @@ const ImageWithText = ({ data, style }: PropsImageWithText) => {
         )}
       </div>
       <div
-        className={`relative ${data?.textOrder === 1 ? 'lg:order-1' : 'lg:order-2'} order-1`}
+        className={`relative flex h-full w-full justify-center md:max-h-[400px] md:max-w-[450px] ${data?.textOrder === 1 ? 'lg:order-1' : 'lg:order-2'} order-1`}
       >
         <Image
           src={data?.sideImage}
           alt="side image"
           width={450}
           height={400}
-          className="h-full w-full lg:h-auto lg:max-h-[400px] lg:w-auto lg:max-w-[450px]"
+          className="h-full w-full rounded-lg object-cover lg:max-h-[400px]"
         />
         {data?.imgRightIcon && (
           <Image
@@ -52,7 +52,7 @@ const ImageWithText = ({ data, style }: PropsImageWithText) => {
             height={84}
             alt="right icon"
             src={data?.imgRightIcon}
-            className="absolute -bottom-7 right-2 max-w-[80px] md:-bottom-10 md:max-w-none"
+            className="absolute -bottom-7 right-2 max-w-[80px] md:-bottom-20 lg:-bottom-10 lg:max-w-none"
           />
         )}
       </div>

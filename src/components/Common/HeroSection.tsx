@@ -16,6 +16,7 @@ const HeroSection = ({
         fill
         alt="herosection bg"
         src={backgroundImg}
+        priority={true}
         className="inset-0 h-full min-h-[550px] w-full object-cover xl:object-fill"
       />
 

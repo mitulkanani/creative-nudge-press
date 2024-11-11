@@ -15,7 +15,7 @@ const CardSection = ({ data }: data) => {
 
           <Description1
             description={data?.description}
-            style="!max-w-[800px] w-full !text-center"
+            style={`!max-w-[800px] w-full !text-center ${data?.isDescriptionTop ? 'block' : 'hidden'}`}
           />
         </div>
         <div className="flex flex-wrap justify-center gap-6">
@@ -40,7 +40,7 @@ const CardSection = ({ data }: data) => {
           ))}
         </div>
         <p
-          className={`max-w-[875px] text-center font-lora text-base text-gray ${data?.isDescriptionTop && 'hidden'}`}
+          className={`max-w-[875px] text-center font-lora text-base text-gray ${data?.isDescriptionTop ? 'hidden' : 'block'}`}
         >
           {data?.description}
         </p>

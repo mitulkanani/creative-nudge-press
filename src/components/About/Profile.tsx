@@ -10,7 +10,6 @@ const Profile = () => {
     <div className="relative bg-snow py-10 md:py-[100px]">
       <div className="relative mx-auto flex max-w-[1440px] flex-col gap-[72px] px-5 xl:px-[148px]">
         <div className="flex flex-col items-center gap-9 lg:flex-row">
-          {' '}
           <Image src={profile?.image} width={400} height={559} alt="profile" />
           <div className="flex flex-col gap-6 lg:max-w-[708px] lg:px-9">
             <div className="flex flex-col gap-1">

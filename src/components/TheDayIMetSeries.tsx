@@ -1,8 +1,8 @@
 import { Book } from '@/utils/content';
 import Image from 'next/image';
-import React from 'react';
-import Heading3 from './Common/Heading3';
+import Link from 'next/link';
 import Description2 from './Common/Description2';
+import Heading3 from './Common/Heading3';
 
 const TheDayIMetSeries = () => {
   const { TheDayIMetSeries } = Book;
@@ -13,7 +13,11 @@ const TheDayIMetSeries = () => {
         <div className="order-2 flex w-full flex-col gap-[57px] bg-icy p-5 md:p-9 lg:order-1 lg:max-w-[708px]">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-1">
-              <Heading3 title={TheDayIMetSeries?.title} />
+              <Link
+                href={`/detailbook/${TheDayIMetSeries?.title.replace(/\s+/g, '-')}`}
+              >
+                <Heading3 title={TheDayIMetSeries?.title} />
+              </Link>
               <Description2 description={TheDayIMetSeries?.desc} />
             </div>
             <div className="flex flex-col items-start gap-1 md:flex-row">
@@ -42,14 +46,18 @@ const TheDayIMetSeries = () => {
             ))}
           </div>
         </div>
-
-        <Image
-          src={TheDayIMetSeries?.image}
-          alt=""
-          width={400}
-          height={400}
+        <Link
+          href={`/detailbook/${TheDayIMetSeries?.title.replace(/\s+/g, '-')}`}
           className="lg::order-2 order-1 h-full w-full md:max-h-[400px] md:max-w-[400px]"
-        />
+        >
+          <Image
+            src={TheDayIMetSeries?.image}
+            alt=""
+            width={400}
+            height={400}
+            className="h-full w-full md:max-h-[400px] md:max-w-[400px]"
+          />
+        </Link>
       </div>
     </div>
   );

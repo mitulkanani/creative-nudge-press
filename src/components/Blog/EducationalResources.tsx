@@ -1,12 +1,41 @@
+'use client';
 import { blogPageData } from '@/utils/content';
+import Image from 'next/image';
+import { useState } from 'react';
 import Description2 from '../Common/Description2';
 import Heading1 from '../Common/Heading1';
 import Heading3 from '../Common/Heading3';
 import Button from '../Common/Button';
-import Image from 'next/image';
 
 const EducationalResources = () => {
   const { educationResources } = blogPageData;
+  const [downloadStatus, setDownloadStatus] = useState<{
+    [key: string]: boolean;
+  }>({});
+
+  const handleDownload = async (pdfPath: string, title: string) => {
+    try {
+      setDownloadStatus({ ...downloadStatus, [pdfPath]: true });
+
+      const response = await fetch(pdfPath);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = title.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Download error:', error);
+    } finally {
+      setDownloadStatus({ ...downloadStatus, [pdfPath]: false });
+    }
+  };
+
   return (
     <div className="mx-auto mt-10 flex max-w-[1440px] flex-col gap-16 px-5 py-10 lg:mt-[100px] lg:py-[100px] xl:px-[148px]">
       <div className="relative">
@@ -46,7 +75,18 @@ const EducationalResources = () => {
                       key={index}
                       className="text-sm text-slateGray md:text-base"
                     >
-                      {item}
+                      <button
+                        onClick={() =>
+                          handleDownload(item?.pdfPath, item.title)
+                        }
+                        className="text-left hover:text-cyanBlue focus:outline-none focus:ring-2 focus:ring-cyanBlue focus:ring-offset-2"
+                        disabled={downloadStatus[item.pdfPath]}
+                      >
+                        {item?.title}
+                        {downloadStatus[item.pdfPath] && (
+                          <span className="ml-2 text-xs">Downloading...</span>
+                        )}
+                      </button>
                     </li>
                   ))}
                 </ul>

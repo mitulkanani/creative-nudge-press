@@ -4,6 +4,7 @@ import React from 'react';
 import Heading3 from './Common/Heading3';
 import Description2 from './Common/Description2';
 import Description3 from './Common/Description3';
+import Link from 'next/link';
 
 const ChildrenBooks = () => {
   const { ChildrenBooks } = Book;
@@ -13,18 +14,27 @@ const ChildrenBooks = () => {
         {ChildrenBooks?.heading}
       </div>
       <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-6 px-5 py-[100px] xl:px-[148px]">
-        <div className="flex flex-col items-center gap-9 md:flex-row">
-          <Image
-            src={ChildrenBooks?.image}
-            alt=""
-            width={400}
-            height={400}
+        <div className="flex flex-col items-center gap-9 lg:flex-row">
+          <Link
+            href={`/detailbook/${ChildrenBooks?.title.replace(/\s+/g, '-')}`}
             className="h-full max-h-[400px] w-full max-w-[400px]"
-          />
+          >
+            <Image
+              src={ChildrenBooks?.image}
+              alt=""
+              width={400}
+              height={400}
+              className="h-full max-h-[400px] w-full max-w-[400px]"
+            />
+          </Link>
           <div className="flex flex-col gap-[60px] rounded-lg bg-white p-5 md:p-9">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-1">
-                <Heading3 title={ChildrenBooks?.title} />
+                <Link
+                  href={`/detailbook/${ChildrenBooks?.title.replace(/\s+/g, '-')}`}
+                >
+                  <Heading3 title={ChildrenBooks?.title} />
+                </Link>
                 <Description2 description={ChildrenBooks?.desc} />
               </div>
               <div className="flex flex-col gap-1">
@@ -44,6 +54,7 @@ const ChildrenBooks = () => {
             </div>
           </div>
         </div>
+
         <div className="flex flex-col items-center gap-12 rounded-[8px] bg-offwhiteyellow px-5 py-6 md:flex-row md:px-12 lg:mx-[72px]">
           <Image
             src={ChildrenBooks?.icon}

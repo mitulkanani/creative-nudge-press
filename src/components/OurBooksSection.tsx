@@ -23,17 +23,22 @@ const OurBooksSection = () => {
               key={index}
               className="flex w-full max-w-[404px] flex-col gap-5"
             >
-              <Image
-                src={card.image}
-                alt=""
-                width={404}
-                height={350}
-                className="h-full max-h-[350px] w-full max-w-[404px]"
-              />
-              <div className="flex flex-col">
-                <Heading3 title={card.title} style="!text-[20px] k" />
+              <div className="h-full max-h-[404px] w-full max-w-[404px]">
+                <Image
+                  src={card.image}
+                  alt=""
+                  width={404}
+                  height={404}
+                  className="h-full w-full rounded-lg"
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <Heading3
+                  title={card.title}
+                  style="!text-[20px] !leading-[25.6px] "
+                />
 
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-5">
                   {card.description.map((desc, index) => (
                     <div key={index}>
                       <Description2 description={desc} />

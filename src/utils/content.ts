@@ -46,7 +46,6 @@ export const footerData = {
   ],
   emailPlaceholder: 'Your Email Address',
   btnText: 'Subscribe',
-  btnLink: '#',
   image: '/images/footerImage.png',
   rights: '© 2024 Creative Nudge Press LLC. All rights reserved.',
   element: '/svg/starWithGlasses.svg',
@@ -56,7 +55,7 @@ export const aboutPageData = {
   herosection: {
     title: 'About Creative Nudge Press',
     description: 'Discover our story, mission, and the passion that drives us.',
-    backgroundImg: '/images/commonHeroBg.png',
+    backgroundImg: '/images/commonHeroBg.webp',
     leftIcon: '/svg/star.svg',
     rightIcon: '/svg/book.svg',
   },
@@ -163,10 +162,6 @@ export const aboutPageData = {
         icon: '/svg/communityBuilder.svg',
         title: 'Community Builder',
       },
-      {
-        icon: '/svg/visionary.svg',
-        title: 'Visionary',
-      },
     ],
     element: '/svg/sparrowYellow.svg',
   },
@@ -175,7 +170,7 @@ export const aboutPageData = {
 export const HomeHeroData = {
   HeroSection: {
     title: 'Transforming Lives Through Literature',
-    image: '/images/homeBg.png',
+    image: '/images/homeBg.webp',
     description:
       'Capturing the richness of human experiences, inspiring passions, and providing the knowledge to overcome obstacles.',
     slogan: '"Spark inspiration, fuel aspiration, ignite motivation."',
@@ -269,7 +264,7 @@ export const Book = {
     title: 'Our Books',
     description:
       'Inspiring stories and empowering knowledge for readers of all ages.',
-    backgroundImg: '/images/commonHeroBg.png',
+    backgroundImg: '/images/commonHeroBg.webp',
     leftIcon: '/svg/bird.svg',
     rightIcon: '/svg/plane.svg',
   },
@@ -375,7 +370,7 @@ export const blogPageData = {
   herosection: {
     title: 'Our Blog',
     description: 'Inspiration, Insights, and Ideas for Readers and Writers',
-    backgroundImg: '/images/commonHeroBg.png',
+    backgroundImg: '/images/commonHeroBg.webp',
     leftIcon: '/svg/openedBook.svg',
     rightIcon: '/svg/starWithGlasses.svg',
   },
@@ -459,13 +454,26 @@ export const blogPageData = {
         description:
           'Download our free guides on using Creative Nudge Press books in educational settings:',
         descriptionDetails: [
-          'Discussion Guide: The Mumbai Street Siblings Series',
-          'Activity Workbook: The Day I Met... Series',
-          'Lesson Plans: Fostering Resilience Through Stories',
+          {
+            title: 'Discussion Guide: The Mumbai Street Siblings Series',
+            pdfPath:
+              'https://drive.google.com/file/d/1uh7-MnIafbtH6vuLDpxbtGw6Pcg1bQcq/view',
+          },
+          {
+            title: 'Activity Workbook: The Day I Met... Series',
+            pdfPath:
+              'https://drive.google.com/file/d/1uh7-MnIafbtH6vuLDpxbtGw6Pcg1bQcq/view',
+          },
+          {
+            title: 'Lesson Plans: Fostering Resilience Through Stories',
+            pdfPath:
+              'https://drive.google.com/file/d/1uh7-MnIafbtH6vuLDpxbtGw6Pcg1bQcq/view',
+          },
         ],
         button: {
           btnText: 'Download Now',
-          btnLink: '#',
+          btnLink:
+            'https://drive.google.com/file/d/1uh7-MnIafbtH6vuLDpxbtGw6Pcg1bQcq/view',
         },
       },
       {
@@ -473,13 +481,26 @@ export const blogPageData = {
         description:
           'Enhance your reading experience with these complementary materials:',
         descriptionDetails: [
-          'Character Exploration Worksheets',
-          'Reflection Journal Prompts',
-          'Creative Writing Exercises Inspired by Our Books',
+          {
+            title: 'Character Exploration Worksheets',
+            pdfPath:
+              'https://drive.google.com/file/d/1uh7-MnIafbtH6vuLDpxbtGw6Pcg1bQcq/view',
+          },
+          {
+            title: 'Reflection Journal Prompts',
+            pdfPath:
+              'https://drive.google.com/file/d/1uh7-MnIafbtH6vuLDpxbtGw6Pcg1bQcq/view',
+          },
+          {
+            title: 'Creative Writing Exercises Inspired by Our Books',
+            pdfPath:
+              'https://drive.google.com/file/d/1uh7-MnIafbtH6vuLDpxbtGw6Pcg1bQcq/view',
+          },
         ],
         button: {
           btnText: 'Access Resources',
-          btnLink: '#',
+          btnLink:
+            'https://drive.google.com/file/d/1uh7-MnIafbtH6vuLDpxbtGw6Pcg1bQcq/view',
           variant: Variant.OUTLINED,
         },
       },
@@ -501,7 +522,7 @@ export const contactPageData = {
     title: 'Contact Us',
     description:
       "We'd love to hear from you! Get in touch with Creative Nudge Press.",
-    backgroundImg: '/images/commonHeroBg.png',
+    backgroundImg: '/images/commonHeroBg.webp',
     leftIcon: '/svg/star.svg',
     rightIcon: '/svg/sparrowYellow.svg',
   },
@@ -645,7 +666,8 @@ export const detailBooksData = [
       desc: "When little Amit follows his nose chasing the irresistible scent of jalebi through Mumbai's winding streets, his adventure launches a heartwarming tale of sibling love, determination, and the unexpected joys found in everyday life. Watch as Anita and Sunita work together to help their brother's sweet dream come true, discovering that the greatest treasures often come from the simplest moments shared together.",
       button: {
         btnText: 'Order Now',
-        btnLink: '#',
+        btnLink:
+          'https://www.amazon.com/Mumbai-Street-Siblings-Childrens-Adventure-ebook/dp/B0DLXYYWMM/ref=sr_1_1?crid=3K59ZAGTFJ4YG&dib=eyJ2IjoiMSJ9.mkOh1r-3UVhy7jmz9jsUVw.hFtZpBov_ksmzsfUtCYTiOTVdvWnd0WP8rX4uzAXzNo&dib_tag=se&keywords=mumbai+street+siblings&qid=1731299644&sprefix=mumbai+stree%2Caps%2C189&sr=8-1',
       },
       cards: [
         {

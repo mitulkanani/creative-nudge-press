@@ -13,6 +13,7 @@ const HeroSection = () => {
         src={HeroSection.image}
         alt=""
         fill
+        priority={true}
         className="inset-0 h-full w-full object-cover"
       />
 
