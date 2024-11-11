@@ -20,7 +20,7 @@ const SeriesOverview = ({
         />
       </div>
 
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-16 px-5 py-[100px] xl:px-[148px]">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-10 px-5 py-10 md:gap-16 md:py-[100px] xl:px-[148px]">
         {seriesOverview?.videoSection ? (
           <TitleWithVideo
             videoLink={seriesOverview?.videoSection?.videoLink}

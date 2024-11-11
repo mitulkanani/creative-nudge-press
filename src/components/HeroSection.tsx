@@ -34,7 +34,10 @@ const HeroSection = () => {
               {HeroSection.slogan}
             </h3>
           </div>
-          <Button label={HeroSection.button.label} />
+          <Button
+            label={HeroSection.button.label}
+            link={HeroSection?.button?.btnlink}
+          />
           <Image
             src="/svg/sparrow.svg"
             alt=""

@@ -180,7 +180,7 @@ export const HomeHeroData = {
       'Capturing the richness of human experiences, inspiring passions, and providing the knowledge to overcome obstacles.',
     slogan: '"Spark inspiration, fuel aspiration, ignite motivation."',
     button: {
-      btnlink: '',
+      btnlink: '/book',
       label: 'Explore Our Books',
       variant: '',
     },
